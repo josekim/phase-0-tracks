@@ -1,0 +1,22 @@
+
+#octopus {
+  display: block;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#hat {
+  position: absolute;
+  z-index: 2;
+  left: 40%;
+  top:40px
+}
+
+#glasses {
+  position: absolute;
+  z-index: 3;
+  left: 45%;
+  top: 200px
+}
+/* noticed that this isn't a very good solution as when you change the window size the items move with it.  Seems like there is a better way to do this but spending too much time to figure it out */
