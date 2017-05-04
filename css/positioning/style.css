@@ -1,17 +1,14 @@
 .wrapper{
-  outline: solid 1px gray;
   position:absolute;
   margin-left:40%;
   /*I wanted to use margin left auto and margin right auto to center, but seemed like doesn't work,  Why doesn't that work?*/
 }
 #octopus {
-  outline: solid 1px red;
   display: block;
   margin-top: 100px;
 }
 
 #hat {
-   outline: solid 1px blue;
   position: absolute;
   z-index: 2;
   left: -10%;
@@ -19,7 +16,6 @@
 }
 
 #glasses {
-   outline: solid 1px orange;
   position: absolute;
   z-index: 3;
   left: 20%;
