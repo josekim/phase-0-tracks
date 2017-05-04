@@ -1,22 +1,27 @@
-
+.wrapper{
+  outline: solid 1px gray;
+  position:absolute;
+  margin-left:40%;
+  /*I wanted to use margin left auto and margin right auto to center, but seemed like doesn't work,  Why doesn't that work?*/
+}
 #octopus {
+  outline: solid 1px red;
   display: block;
   margin-top: 100px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 #hat {
+   outline: solid 1px blue;
   position: absolute;
   z-index: 2;
-  left: 40%;
+  left: -10%;
   top:40px
 }
 
 #glasses {
+   outline: solid 1px orange;
   position: absolute;
   z-index: 3;
-  left: 45%;
-  top: 200px
+  left: 20%;
+  top: 51%;
 }
-/* noticed that this isn't a very good solution as when you change the window size the items move with it.  Seems like there is a better way to do this but spending too much time to figure it out */
