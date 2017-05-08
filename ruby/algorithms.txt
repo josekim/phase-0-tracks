@@ -1,0 +1,29 @@
+Robot Elevator Algorithm
+- Enter into Elevator
+- Find Panel with Buttons
+- Find button that matches the floor destination
+- Press button 
+- until elevator door closes and moves 
+    + press button again
+    + and wait 3seconds
+- Until elevator stop moving & door opens & Floor Display matches 
+    + wait patiently or hum elevator music
+- Exit
+
+Logging on to computer
+- Plug in computer power cord to power outlet
+- Plug power supply to computer
+- If computer is asleep
+    + press any key
+    + move mouse
+- else if Computer turned off
+    + press power key
+- wait for log on screen 
+- Use mouse and click on password
+- Type in password and press enter
+- while login was incorrect or 5 incorrect passwords
+    + check caps lock
+    + check hand placement on keyboard
+    + type in password again
+- if not login
+    + check if right computer
