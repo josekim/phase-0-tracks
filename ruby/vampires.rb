@@ -12,6 +12,7 @@ end
 def eatGarlic(bread)
   bread.downcase == "yes" ||  bread.downcase == "y"
 end
+#A vampire's Name?
 def vampireName(name)
   name.downcase == "Drake Cula".downcase || name.downcase == "Tu Fang".downcase
 end
@@ -62,8 +63,8 @@ end
 ######## the program really starts here ######
 puts "How many employees will be processed?"
  numberOfEmployees = gets.chomp.to_i
-for i in 1..numberOfEmployees
-  survey(i)
+for employee in 1..numberOfEmployees
+  survey(employee)
 end
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 ######## Program ends Here ##########
