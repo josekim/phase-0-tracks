@@ -38,10 +38,8 @@ def survey(employeeNumber)
 
   # check Allergy is sunshine
   is_vampire = "Results inconclusive"
-  if(allergy == "sunshine")  # skip if comparison if allergy is sunshine
-    is_vampire = "Probably a vampire"
-  else
-    #condition matching
+  if(allergy != "sunshine")
+   #condition matching
     if (ageIsRight(year,age) && (eatGarlic(bread) || needInsurance(plan)))
       is_vampire = "Probably not a vampire"
     end
@@ -54,6 +52,8 @@ def survey(employeeNumber)
     if (vampireName(name))
       is_vampire = "Definitely a vampire"
     end
+  else
+    is_vampire = "Probably a vampire"
   end
 
   puts "Results for Employee #{employeeNumber}: #{is_vampire}"
