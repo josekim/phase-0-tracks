@@ -1,3 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Exo');
+
+body {
+  font-family: 'Exo', sans-serif;
+  background-color: lightgray;
+}
+
+header {
+  background-color: gray;
+  padding: 5px;
+}
+
+section {
+  margin: auto
+}
+
+.column-1 {
+  background-color: teal;
+  display: inline-block;
+  width: 45%;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.column-2 {
+  background-color: pink;
+  display: inline-block;
+  width: 45%;
+  padding: 10px;
+  vertical-align: top;
+  margin-left: 15px;
+}
+
+details {
+  background-color: lightgray;
+}
+
+img {
+  width: 15%;
+  display: inline-block;
+  float: right;
+}
+
 h1 {
-  font-size: 10px;
+  display: inline-block;
+}
+
+h2 {
+  background-color: black;
+  color: white;
+  padding-left: 10px;
+}
+
+
+footer {
+  background-color: darkgray;
+  padding: 30px 5px 30px 5px;
 }
