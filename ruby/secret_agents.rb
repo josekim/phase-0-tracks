@@ -55,9 +55,9 @@ pass = gets.chomp
 
 
 if choice == "encrypt"
-  encrypt(pass)
+  puts encrypt(pass)
 elsif choice == "decrypt"
-  decrypt(pass)
+  puts decrypt(pass)
 else
   puts "Wrong selection"
 end
