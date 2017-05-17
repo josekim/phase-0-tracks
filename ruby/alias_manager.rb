@@ -2,7 +2,7 @@
 # split string from each other
 # split characters in each first and last name
 # for each letter in name, if vowel, move the next vowel
-# rejoin string
+#   rejoin letters and capitalize name
 # rejoin last name and then first name to one string
 def nextLetter(letter)
   vowels = "aeioua"
