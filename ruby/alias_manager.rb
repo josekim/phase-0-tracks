@@ -6,14 +6,16 @@
 #  else move to next letter
 # rejoin letters and capitalize name
 # rejoin last name and then first name to one string
+def indexOfVowel(letter,vowels)
+  vowels.index(letter)
+end
 
 def nextLetter(letter)
   vowels = "aeioua"
-  isItVowel = vowels.index(letter)
-  if (isItVowel != nil)
-    return vowels[vowels.index(letter)+1]
+  if (indexOfVowel(letter,vowels) != nil)
+    return vowels[indexOfVowel(letter,vowels)+1]
   else
-    if (vowels.index(letter.next) != nil)
+    if (indexOfVowel(letter.next,vowels) != nil)
       return letter.next.next
     elsif (letter.next == "aa")
       return 'b'
@@ -45,7 +47,7 @@ nameInput= ''
 until (nameInput.downcase == 'quit')
   puts "Type in a name or quit"
   nameInput=gets.chomp.split(' ').map!{|name| name.capitalize}.join(" ")
-  if (nameInput.downcase !='quit')
+  if (nameInput.downcase !='quit' && !nameInput.empty?)
     puts secretNames[nameInput] = nameEncryptorV2(nameInput)
   end
 end
