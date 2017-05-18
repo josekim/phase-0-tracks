@@ -11,11 +11,24 @@ puts zombie_apocalypse_supplies.join(" * ")
 # 2. In order to keep yourself organized, sort your zombie_apocalypse_supplies
 # in alphabetical order. Do not use any special built-in methods.
 # ----
-
-sort_zombie_apocalypse_supplies = []
-
-
-
+def sortarray (array)
+  new_array = Array.new(array)
+  rounds = array.length - 1
+  swap = true
+  while swap == true
+  swap = false
+  rounds.times {|index|
+    if new_array[index].downcase > new_array[index + 1].downcase
+      value1 = new_array[index]
+      new_array[index] = new_array[index + 1]
+      new_array[index + 1] = value1
+      swap = true
+    end
+  }
+  end
+return new_array
+end
+p sortarray(zombie_apocalypse_supplies)
 
 # 3. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies. Do not use any special built-in methods.
