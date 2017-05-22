@@ -1,4 +1,6 @@
 class Santa
+  attr_reader :age,:ethnicity
+  attr_accessor :gender,
   def initialize(gender, ethnicity)
    puts "Initializing Santa instance..."
    @gender = gender
@@ -24,7 +26,7 @@ class Santa
     last = @reindeer_ranking.slice!(index)
     @reindeer_ranking.push(last)
   end
-
+=begin
   def gender=(new_gender)
   @gender = new_gender
   end
@@ -36,13 +38,14 @@ class Santa
   def ethnicity
   @ethnicity
   end
-
+=end
 end
 
 
 
 
 ############## Driver ###############
+=begin
 santas = []
 person = {
   person1: {
@@ -85,3 +88,16 @@ santas.each {|santa|
   p santa.ethnicity
   p santa.age
 }
+=end
+
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+
+for i in 1..1000000
+  new_santa = Santa.new(example_genders.sample,example_ethnicities.sample)
+  p new_santa.age = rand(141)
+  p new_santa.gender
+  p new_santa.ethnicity
+  p new_santa.reindeer_ranking
+end
