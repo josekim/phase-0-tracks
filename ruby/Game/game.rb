@@ -1,3 +1,12 @@
+#Pseudo Code
+#Game will be initilaized with Word or phrase
+#Game will have 4 major methods
+ #Will return Phrase situation in "_ _ _ _ _ _"
+ #will have a Guessing method that takes letter or word
+  # if valid word or letter, guessing method will update the program status including number of guess and Phrase situation
+ #will have a Win method that returns whether win or not
+ #will have a continue method, which lets player know whether to continue guessing or not
+
 class Game
   attr_reader :number_of_guesses, :continue
   def initialize (password)

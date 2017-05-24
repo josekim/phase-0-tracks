@@ -1,6 +1,5 @@
 require_relative "game"
 
-
 describe Game do
   let(:game) { Game.new("New Password") }
 
@@ -21,6 +20,14 @@ describe Game do
     game.guess("z")
     game.guess("u")
     expect(game.get_phrase).to eq "_ _ _   _ _ s s _ _ _ _"
+  end
+
+  it "Deal with Same Letter" do
+    game.guess("s")
+    game.guess("s")
+    game.guess("s")
+    game.guess("s")
+    expect(game.number_of_guesses).to eq 10
   end
 
   it "Guessing counter increments" do
@@ -50,7 +57,6 @@ describe Game do
     expect(game.number_of_guesses).to eq 0
     game.guess("j")
     expect(game.number_of_guesses).to eq -1
-
   end
 
   it "Guessed Right Word?" do
@@ -61,15 +67,8 @@ describe Game do
     expect(game.guessed_right_word?("New Pssword")).to eq false
   end
 
-  it "Deal with Same Letter" do
-    game.guess("s")
-    game.guess("s")
-    game.guess("s")
-    game.guess("s")
-    expect(game.number_of_guesses).to eq 10
-  end
 
-  it "Check if Win by finding all letters" do
+  it "Win by finding all letters" do
     game.guess("p")
     game.guess("a")
     game.guess("s")
@@ -83,13 +82,13 @@ describe Game do
     expect(game.continue).to eq false
   end
 
-  it " check if Win by finding the correct word" do
+  it " Win by finding the correct word" do
     game.guess("new Password")
     expect(game.win?).to eq true
     expect(game.continue).to eq false
   end
 
-  it "Check if lose by no continue" do
+  it "lose by no continue" do
     game.guess("a")
     game.guess("z")
     game.guess("y")
@@ -104,6 +103,5 @@ describe Game do
     game.guess("dfoi")
     expect(game.win?).to eq false
     expect(game.continue).to eq false
-
   end
 end
