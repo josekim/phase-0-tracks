@@ -70,3 +70,26 @@ p add_item(list1,"Ice Cream", 4 )
 p remove_item(list1,"Lemonade")
 p change_quantity(list1, "Ice Cream", 1)
 print_list(list1)
+
+
+=begin
+What did you learn about pseudocode from working on this challenge?
+Its really helpful to pseudocode and list out what you expect to be inputs and what you expect to be be returned from a method
+
+What are the tradeoffs of using arrays and hashes for this challenge?
+Hashes seem to work best for this code, since you could use key and value pairs for our list.  it seems arrays aren't so helpful for this set of  data
+
+What does a method return?
+method returns the last statement
+
+What kind of things can you pass into methods as arguments?
+pretty much anything data type that fits the parameters of what the method is calling
+
+How can you pass information between methods?
+you can store a list in a variable and pass it in as an argument
+
+What concepts were solidified in this challenge, and what concepts are still confusing?
+everything seems fine for me.
+
+
+=end
