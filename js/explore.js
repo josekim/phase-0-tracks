@@ -2,7 +2,7 @@
 Pseudo Code - Reverse
 
 Take new word or phrase
-starting at the first letter
+starting at the first letter till end is reached
   put letter at the front of the array.
 When Finish return new word
 
