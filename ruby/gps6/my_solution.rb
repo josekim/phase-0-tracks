@@ -4,8 +4,8 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# Require_Relative is pulling the data from another file in the same Directory
+# Require looks in certain folders via absolute path or ruby libraries/gems
 require_relative 'state_data'
 
 class VirusPredictor
