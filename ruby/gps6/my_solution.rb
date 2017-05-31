@@ -4,8 +4,8 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# Require_Relative is pulling the data from another file in the same Directory
+# Require looks in certain folders via absolute path or ruby libraries/gems
 require_relative 'state_data'
 
 class VirusPredictor
@@ -16,13 +16,14 @@ class VirusPredictor
     @population_density = population_density
   end
 
+  # virus_effect - Running predicted_deaths and speed_of_spread - Public method
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
   private
-
+  # Predicts death as percentage of population at different population density thresholds
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -41,6 +42,7 @@ class VirusPredictor
 
   end
 
+  # Predicts the number of months for disease to spread using population density
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
@@ -69,7 +71,7 @@ end
 # DRIVER CODE
  # initialize VirusPredictor for each state
 
-
+=begin
 alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
 alabama.virus_effects
 
@@ -81,7 +83,12 @@ california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
+=end
 
+STATE_DATA.each do |state, population_hash|
+  new_state = VirusPredictor.new(state, population_hash[:population_density], population_hash[:population])
+  new_state.virus_effects
+end
 
 #=======================================================================
 # Reflection Section
