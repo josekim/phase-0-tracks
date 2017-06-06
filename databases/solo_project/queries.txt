@@ -36,3 +36,19 @@ sqlite> SELECT screws.name, screws.metal, screw_type.type FROM screws JOIN screw
 Lag Bolt|true|Hex
 Wood Screw|true|Pan
 Dry-wall Screw|true|Flat
+
+
+Release 3
+Left join, right join, inner join
+
+sqlite> SELECT * from screw_type LEFT JOIN screws ON screw_type.id = screws.type;
+1|Pan|2|Wood Screw|true|1
+2|Flat|3|Dry-wall Screw|true|2
+3|Hex|1|Lag Bolt|true|3
+
+sqlite> SELECT * from screw_type LEFT JOIN screws ON screw_type.id = screws.type;
+1|Pan|4|Plastic Screws|false|1
+1|Pan|2|Wood Screw|true|1
+1|Pan|5|screw|false|1
+2|Flat|3|Dry-wall Screw|true|2
+3|Hex|1|Lag Bolt|true|3
