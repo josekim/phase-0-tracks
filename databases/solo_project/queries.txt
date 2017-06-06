@@ -1,1 +1,38 @@
 Question # 1
+
+sqlite> SELECT * FROM screws;
+1|Lag Bolt|true|3
+2|Wood Screw|true|1
+3|Dry-wall Screw|true|2
+4|Plastic Screws|false|1
+
+
+Question # 2
+UPDATE screw_type SET type="Pan" WHERE type="pan";
+UPDATE screw_type SET type="Hex" WHERE type="hex";
+UPDATE screw_type SET type="Flat" WHERE type="flat";
+sqlite> SELECT * FROM screw_type;
+1|Pan
+2|Flat
+3|Hex
+
+Question # 3
+sqlite> SELECT * FROM screws, screw_type where screws.type = screw_type.id;
+1|Lag Bolt|true|3|3|Hex
+2|Wood Screw|true|1|1|Pan
+3|Dry-wall Screw|true|2|2|Flat
+4|Plastic Screws|false|1|1|Pan
+
+Question # 4 
+sqlite> SELECT screws.name, screws.metal, screw_type.type FROM screws JOIN screw_type ON screws.type = screw_type.id;
+Lag Bolt|true|Hex
+Wood Screw|true|Pan
+Dry-wall Screw|true|Flat
+Plastic Screws|false|Pan
+
+Question #5
+sqlite> DELETE FROM screws WHERE name ="Plastic Screws";
+sqlite> SELECT screws.name, screws.metal, screw_type.type FROM screws JOIN screw_type ON screws.type = screw_type.id;
+Lag Bolt|true|Hex
+Wood Screw|true|Pan
+Dry-wall Screw|true|Flat
