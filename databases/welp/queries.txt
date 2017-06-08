@@ -1,0 +1,31 @@
+QUESTION 2
+
+SELECT * FROM reviews, businesses, users
+WHERE reviews.business_id = businesses.id AND reviews.user_id = users.id; 
+
+1|4|Pretty good!|1|1|1|Grundy Hollow Wedding Chapel|1|Bradford|Pitt
+2|5|Tasty!|1|2|2|Amir's Towing|1|Bradford|Pitt
+3|1|Gross|2|2|2|Amir's Towing|2|Mandy|Kaling
+
+QUESTION 3
+
+SELECT reviews.stars, reviews.comment, users.first_name, users.last_name, businesses.name
+FROM reviews
+JOIN businesses ON reviews.business_id = businesses.id                    
+JOIN users ON reviews.user_id = users.id; 
+
+output:
+4|Pretty good!|Bradford|Pitt|Grundy Hollow Wedding Chapel
+5|Tasty!|Bradford|Pitt|Amir's Towing
+1|Gross|Mandy|Kaling|Amir's Towing  
+
+QUESTION 4
+
+SELECT reviews.stars, reviews.comment, users.first_name, users.last_name, businesses.name
+FROM reviews
+JOIN businesses ON reviews.business_id = businesses.id                    
+JOIN users ON reviews.user_id = users.id
+WHERE businesses.name = "Amir's Towing";
+
+5|Tasty!|Bradford|Pitt|Amir's Towing
+1|Gross|Mandy|Kaling|Amir's Towing
