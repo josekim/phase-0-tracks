@@ -6,6 +6,7 @@ CMD_PROMPTS = <<-cmd_prompts
 Here are the following Features you can do
 1)Search a Student?
 2)Create New Student?
+3)Update Student?
 cmd_prompts
 
 SEARCH_STUDENT_PROMPT = <<-SEARCH_STUDENT_prompts
