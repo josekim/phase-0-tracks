@@ -1,0 +1,11 @@
+.lizard-photo {
+  width: 225px;
+  height: auto;
+}
+
+.lizard-photo-hide {
+  display: none;
+  width: 225px;
+  height: auto;
+}
+
