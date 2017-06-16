@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>New Thing I created</h1>
+  <p>This is So Cool</p>
+  <p>Click on me to go back to home page <a href="/">here</a> I'm Serious</p>
+  <ul>
+    <% @students.each do |student| %>
+      <li> <%= student['age'] %> </li>
+    <% end %>
+  </ul>
+</body>
+</html>
